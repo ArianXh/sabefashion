@@ -1,0 +1,18 @@
+[
+  {
+    "id": 1,
+    "title": "Stylish",
+    "subtitle": "Summer Edition",
+    "text": "30% off Summer Vacation",
+    "image": "/assets/img/slider/hero_summer.png",
+    "url": "/shop-grid-standard"
+  },
+  {
+    "id": 2,
+    "title": "Stylish",
+    "subtitle": "Winter Edition",
+    "text": "30% off Summer Vacation",
+    "image": "/assets/img/slider/hero_winter.jpg",
+    "url": "/shop-grid-standard"
+  }
+]
