@@ -17,6 +17,7 @@
     "i18next-http-backend": "^2.0.1",
     "prop-types": "^15.8.1",
     "react": "^18.2.0",
+    "react-app-rewired": "^2.2.1",
     "react-bootstrap": "^2.5.0",
     "react-countup": "^6.3.2",
     "react-dom": "^18.2.0",
@@ -30,6 +31,7 @@
     "react-router-dom": "^6.4.3",
     "react-scripts": "^5.0.1",
     "react-visibility-sensor": "^5.1.1",
+    "react-whatsapp-chat-widget": "^1.1.6",
     "redux": "^4.2.0",
     "redux-persist": "^6.0.0",
     "sanity": "^3.5.0",
@@ -40,10 +42,10 @@
     "yet-another-react-lightbox": "^2.2.0"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "start": "react-app-rewired start",
+    "build": "react-app-rewired build",
+    "test": "react-app-rewired test",
+    "eject": "react-app-rewired eject"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -66,8 +68,7 @@
     "redux-devtools-extension": "^2.13.8",
     "sass": "^1.29.0"
   },
-  "browser":
-  {
+  "browser": {
     "fs": false,
     "os": false,
     "path": false

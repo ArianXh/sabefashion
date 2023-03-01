@@ -26,7 +26,7 @@ const FooterOne = ({
           >
             {/* footer copyright */}
             <FooterCopyright
-              footerLogo="/assets/img/logo/butiksabe_logo-removedbg.png"
+              footerLogo="/assets/img/logo/logo_sabe-removedbg.png"
               spaceBottomClass="mb-30"
             />
           </div>

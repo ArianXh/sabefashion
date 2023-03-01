@@ -43,7 +43,7 @@ const Contact = () => {
                     </div>
                     <div className="contact-info-dec">
                       <p>
-                        <a href="mailto:yourname@email.com">
+                        <a href="mailto:butiksabe@icloud.com">
                         butiksabe@icloud.com
                         </a>
                       </p>
