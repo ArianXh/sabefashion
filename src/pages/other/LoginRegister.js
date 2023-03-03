@@ -13,7 +13,7 @@ const LoginRegister = () => {
     <Fragment>
       <SEO
         titleTemplate="Login"
-        description="Login page of Sabe Fashion."
+        description="Login page of Sabe Fashion"
       />
       <LayoutOne headerTop="visible">
         {/* breadcrumb */}

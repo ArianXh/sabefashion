@@ -17,7 +17,7 @@ const Checkout = () => {
     <Fragment>
       <SEO
         titleTemplate="Checkout"
-        description="Checkout page of flone react minimalist eCommerce template."
+        description="Checkout page of Sabe Fashion"
       />
       <LayoutOne headerTop="visible">
         {/* breadcrumb */}
@@ -58,9 +58,9 @@ const Checkout = () => {
                           <label>Country</label>
                           <select>
                             <option>Select a country</option>
-                            <option>Azerbaijan</option>
-                            <option>Bahamas</option>
-                            <option>Bahrain</option>
+                            <option>Macedonia</option>
+                            <option>Albania</option>
+                            <option>Kosovo</option>
                             <option>Bangladesh</option>
                             <option>Barbados</option>
                           </select>

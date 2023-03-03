@@ -10,8 +10,6 @@ import ShopSidebar from '../../wrappers/product/ShopSidebar';
 import ShopTopbar from '../../wrappers/product/ShopTopbar';
 import ShopProducts from '../../wrappers/product/ShopProducts';
 
-import WhatsAppWidget from "react-whatsapp-chat-widget";
-
 const ShopGridStandard = () => {
     const [layout, setLayout] = useState('grid three-column');
     const [sortType, setSortType] = useState('');
@@ -56,7 +54,7 @@ const ShopGridStandard = () => {
         <Fragment>
             <SEO
                 titleTemplate="Sabe Shop Page"
-                description="Shop page of Sabe Fashion."
+                description="Shop page of Sabe Fashion"
             />
 
             <LayoutOne headerTop="visible">
@@ -82,9 +80,7 @@ const ShopGridStandard = () => {
                                 {/* shop page content default */}
                                 <ShopProducts layout={layout} products={currentData} />
 
-                                <WhatsAppWidget
-			                        phoneNumber="+389 72733400"
-		                        />
+                                
 
                                 {/* shop product pagination */}
                                 <div className="pro-pagination-style text-center mt-30">
@@ -93,7 +89,7 @@ const ShopGridStandard = () => {
                                         pageLimit={pageLimit}
                                         pageNeighbours={2}
                                         setOffset={setOffset}
-                                        current Page={currentPage}
+                                        currentPage={currentPage}
                                         setCurrentPage={setCurrentPage}
                                         pageContainerClass="mb-0 mt-0"
                                         pagePrevText="«"
