@@ -19,12 +19,20 @@ const NavMenu = ({ menuWhiteClass, sidebarMenu }) => {
               {t("home")}
             </Link>
           </li>
+
+          <li>
+            <Link to={process.env.PUBLIC_URL + "/category"}>
+              {t("category")}
+            </Link>
+          </li>
+
           <li>
             <Link to={process.env.PUBLIC_URL + "/shop-grid-standard"}>
               {" "}
               {t("shop")}
             </Link>
           </li>
+
          
           <li>
             <Link to={process.env.PUBLIC_URL + "/"}>
@@ -68,21 +76,8 @@ const NavMenu = ({ menuWhiteClass, sidebarMenu }) => {
                   {t("login_register")}
                 </Link>
               </li>
-              <li>
-                <Link to={process.env.PUBLIC_URL + "/about"}>
-                  {t("about_us")}
-                </Link>
-              </li>
-              <li>
-                <Link to={process.env.PUBLIC_URL + "/contact"}>
-                  {t("contact_us")}
-                </Link>
-              </li>
-              <li>
-                <Link to={process.env.PUBLIC_URL + "/not-found"}>
-                  {t("404_page")}
-                </Link>
-              </li>
+             
+             
             </ul>
           </li>
           <li>
@@ -118,6 +113,11 @@ const NavMenu = ({ menuWhiteClass, sidebarMenu }) => {
                 </Link>
               </li>
             </ul>
+          </li>
+          <li>
+            <Link to={process.env.PUBLIC_URL + "/about"}>
+              {t("about_us")}
+            </Link>
           </li>
           <li>
             <Link to={process.env.PUBLIC_URL + "/contact"}>

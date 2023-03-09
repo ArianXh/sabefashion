@@ -1,41 +1,51 @@
 export default {
-    name: 'product',
     title: 'Product',
+    name: 'product',
     type: 'document',
     fields: [
         {
-            name: 'image',
-            title: 'Image',
-            type: 'array',
-            of: [{ type: 'image' }],
-            options: {
-                hotspot: true,
-            }
-        },
-        {
-            name: 'name',
-            title: 'Name',
+            title: 'Product Name',
+            name: 'productName',
             type: 'string',
+            validation: Rule => Rule.required()
         },
         {
-            name: 'slug',
-            title: 'Slug',
-            type: 'slug',
+            title: 'A little description',
+            name: 'productDesc',
+            type: 'text',
             options: {
-                source: 'name',
-                maxLength: 90,
-
-            }
+              maxLength: 200,
+            },
+            validation: Rule => Rule.required()
         },
         {
-            name: 'price',
-            title: 'Price',
-            type: 'number',
+            title: "Price",
+            name: "productPrice",
+            type: "number",
+            validation: Rule => Rule.required()
         },
         {
-            name: 'details',
-            title: 'Details',
-            type: 'string',
-        }
+            title: "Discount",
+            name: "productDiscount",
+            type: "number",
+        },
+        {
+            title: "Image",
+            name: "productImage",
+            type: "image",
+            options: {
+              hotspot: true,
+            },
+            validation: Rule => Rule.required()
+        },
+        {
+            name: "category",
+            title: "Category",
+            type: "reference",
+            to: {
+              type: "category"
+            },
+            validation: Rule => Rule.required()
+        },
     ]
-}
+  }

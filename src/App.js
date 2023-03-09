@@ -2,8 +2,12 @@ import { Suspense, lazy } from "react";
 import ScrollToTop from "./helpers/scroll-top";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
+
+
 // home pages
 const HomeFashion = lazy(() => import("./pages/home/HomeFashion"));
+
+
 
 // shop pages
 const ShopGridStandard = lazy(() => import("./pages/shop/ShopGridStandard"));
@@ -18,6 +22,7 @@ const ShopGridRightSidebar = lazy(() =>
 const ShopListStandard = lazy(() => import("./pages/shop/ShopListStandard"));
 const ShopListFullWidth = lazy(() => import("./pages/shop/ShopListFullWidth"));
 const ShopListTwoColumn = lazy(() => import("./pages/shop/ShopListTwoColumn"));
+
 
 // product pages
 const Product = lazy(() => import("./pages/shop-product/Product"));
@@ -40,6 +45,8 @@ const BlogRightSidebar = lazy(() => import("./pages/blog/BlogRightSidebar"));
 const BlogDetailsStandard = lazy(() =>
   import("./pages/blog/BlogDetailsStandard")
 );
+
+
 
 // other pages
 const About = lazy(() => import("./pages/other/About"));
@@ -78,8 +85,9 @@ const App = () => {
               <Route
                 path={process.env.PUBLIC_URL + "/home-fashion"}
                 element={<HomeFashion/>}
-              />
-                               
+              />     
+              
+                                
 
               {/* Shop pages */}
               <Route
@@ -163,11 +171,13 @@ const App = () => {
                 element={<BlogDetailsStandard/>}
               /> 
 
-              {/* Other pages */}
               <Route
                 path={process.env.PUBLIC_URL + "/about"}
                 element={<About/>}
               />
+
+              {/* Other pages */}
+             
               <Route
                 path={process.env.PUBLIC_URL + "/contact"}
                 element={<Contact/>}

@@ -15,6 +15,7 @@ import currencyReducer from "./slices/currency-slice";
 import cartReducer from "./slices/cart-slice";
 import compareReducer from "./slices/compare-slice";
 import wishlistReducer from "./slices/wishlist-slice";
+import thunk from 'redux-thunk';
 
 const persistConfig = {
     key: "flone",

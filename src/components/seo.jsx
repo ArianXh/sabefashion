@@ -24,7 +24,7 @@ SEO.propTypes = {
 SEO.defaultProps = {
     title: "Sabe",
     titleTemplate: "Product Page",
-    description: "Product page of Sabe Fashion.",
+    description: "Product page of Sabe Fashion",
 };
 
 export default SEO;
