@@ -12,6 +12,7 @@ import { useSelector } from "react-redux";
 import  {categories, products}  from "../../data/products";
 
 const HomeFashion = () => {
+  console.log(categories);
   return (
     <Fragment>
       <SEO
@@ -26,7 +27,7 @@ const HomeFashion = () => {
         <HeroSliderTen />
 
         {/* tab product */}
-        <TabProduct spaceTopClass="pt-60" spaceBottomClass="pb-60" category="fashion" />
+        <TabProduct spaceTopClass="pt-60" spaceBottomClass="pb-60" category="fashion"/>
 
         {/* brand logo slider */}
         <BrandLogoSliderOne spaceBottomClass="pb-70" />

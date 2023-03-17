@@ -39,14 +39,13 @@ export default {
         type: 'number'
       },
       {
-        name: "category",
-        title: "Category",
-        type: "reference",
-        to: {
-          type: "category"
-        },
+        name: 'category',
+        title: 'Category',
+        type: 'array',
+        of: [{ type: 'string' }],
         validation: Rule => Rule.required()
       },
+      
       {
         name: 'tag',
         title: 'Tag',
