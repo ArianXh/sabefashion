@@ -16,10 +16,9 @@ const ProductGrid = ({
   const { wishlistItems } = useSelector((state) => state.wishlist);
   const { compareItems } = useSelector((state) => state.compare);
   const prods = getProducts(products, category, type, limit)
-  
   return (
     <Fragment>
-      {prods?.map(product => {
+      {prods.map(product => {
         return (
           <div className="col-xl-3 col-md-6 col-lg-4 col-sm-6" key={product.id}>
             <ProductGridSingle

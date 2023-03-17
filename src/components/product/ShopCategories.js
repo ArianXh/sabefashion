@@ -1,8 +1,10 @@
 import PropTypes from "prop-types";
 
 import { setActiveSort } from "../../helpers/product";
+import  {categories, products}  from "../../data/products";
 
 const ShopCategories = ({ categories, getSortParams }) => {
+  console.log('qijarobt', categories)
   return (
     <div className="sidebar-widget">
       <h4 className="pro-sidebar-title">Categories </h4>

@@ -8,6 +8,8 @@ import FeatureIcon from "../../wrappers/feature-icon/FeatureIcon";
 import TabProduct from "../../wrappers/product/TabProduct";
 import BlogFeatured from "../../wrappers/blog-featured/BlogFeatured";
 import BrandLogoSliderOne from "../../wrappers/brand-logo/BrandLogoSliderOne";
+import { useSelector } from "react-redux";
+import  {categories, products}  from "../../data/products";
 
 const HomeFashion = () => {
   return (
@@ -28,9 +30,6 @@ const HomeFashion = () => {
 
         {/* brand logo slider */}
         <BrandLogoSliderOne spaceBottomClass="pb-70" />
-
-        {/* blog featured */}
-        <BlogFeatured spaceBottomClass="pb-55" />
 
       </LayoutOne>
     </Fragment>

@@ -7,7 +7,7 @@ export default defineConfig({
   name: 'default',
   title: 'sabefashion',
 
-  projectId: 'xz6c122f',
+  projectId: 'flrrvx3c',
   dataset: 'production',
 
   plugins: [deskTool(), visionTool()],

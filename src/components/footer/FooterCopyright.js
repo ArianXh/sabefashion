@@ -3,8 +3,6 @@ import clsx from "clsx";
 import { Link } from "react-router-dom";
 
 const FooterCopyright = ({ footerLogo, spaceBottomClass, colorClass }) => {
-  console.log("arian")
-  console.log(typeof(footerLogo))
   return (
     <div className={clsx("copyright", spaceBottomClass, colorClass)}>
       <div className="footer-logo">

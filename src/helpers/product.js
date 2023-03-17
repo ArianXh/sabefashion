@@ -1,10 +1,21 @@
+import { products } from "../data/products";
+
+
+
 // get products
 export const getProducts = (products, category, type, limit) => {
-  const finalProducts = category
-    ? products.filter(
-        product => product.category.filter(single => single === category)[0]
-      )
-    : products;
+  console.log(products)
+  console.log(category)
+
+
+  const finalProducts = products 
+  
+  
+  //  ? products.filter(
+  //      product => product.category.filter(single => single === category)[0]
+   //   )
+  //  : products;
+  
 
   if (type && type === "new") {
     const newProducts = finalProducts.filter(single => single.new);
@@ -26,10 +37,22 @@ export const getProducts = (products, category, type, limit) => {
   return finalProducts.slice(0, limit ? limit : finalProducts.length);
 };
 
+
+
+
+
+
+
 // get product discount price
 export const getDiscountPrice = (price, discount) => {
   return discount && discount > 0 ? price - price * (discount / 100) : null;
 };
+
+
+
+
+
+
 
 // get product cart quantity
 export const getProductCartQuantity = (cartItems, product, color, size) => {
@@ -57,6 +80,12 @@ export const getProductCartQuantity = (cartItems, product, color, size) => {
   }
 };
 
+
+
+
+
+
+
 export const cartItemStock = (item, color, size) => {
   if (item.stock) {
     return item.stock;
@@ -66,6 +95,10 @@ export const cartItemStock = (item, color, size) => {
       .size.filter(single => single.name === size)[0].stock;
   }
 };
+
+
+
+
 
 //get products based on category
 export const getSortedProducts = (products, sortType, sortValue) => {
@@ -116,6 +149,8 @@ export const getSortedProducts = (products, sortType, sortValue) => {
   return products;
 };
 
+
+
 // get individual element
 const getIndividualItemArray = array => {
   let individualItemArray = array.filter(function(v, i, self) {
@@ -124,6 +159,13 @@ const getIndividualItemArray = array => {
   return individualItemArray;
 };
 
+
+
+
+
+
+
+/*
 // get individual categories
 export const getIndividualCategories = products => {
   let productCategories = [];
@@ -138,6 +180,18 @@ export const getIndividualCategories = products => {
     });
   const individualProductCategories = getIndividualItemArray(productCategories);
   return individualProductCategories;
+};
+*/
+
+
+/*
+export const getIndividualCategories = categories => {
+  return categories.name;
+};
+*/
+
+export const getIndividualCategories = products => {
+  return products.category;
 };
 
 // get individual tags
@@ -156,6 +210,10 @@ export const getIndividualTags = products => {
   return individualProductTags;
 };
 
+
+
+
+
 // get individual colors
 export const getIndividualColors = products => {
   let productColors = [];
@@ -171,6 +229,9 @@ export const getIndividualColors = products => {
   const individualProductColors = getIndividualItemArray(productColors);
   return individualProductColors;
 };
+
+
+
 
 // get individual sizes
 export const getProductsIndividualSizes = products => {
@@ -190,6 +251,9 @@ export const getProductsIndividualSizes = products => {
   return individualProductSizes;
 };
 
+
+
+
 // get product individual sizes
 export const getIndividualSizes = product => {
   let productSizes = [];
@@ -206,6 +270,10 @@ export const getIndividualSizes = product => {
   return individualSizes;
 };
 
+
+
+
+
 export const setActiveSort = e => {
   const filterButtons = document.querySelectorAll(
     ".sidebar-widget-list-left button, .sidebar-widget-tag button, .product-filter button"
@@ -216,6 +284,9 @@ export const setActiveSort = e => {
   e.currentTarget.classList.add("active");
 };
 
+
+
+
 export const setActiveLayout = e => {
   const gridSwitchBtn = document.querySelectorAll(".shop-tab button");
   gridSwitchBtn.forEach(item => {
@@ -223,6 +294,9 @@ export const setActiveLayout = e => {
   });
   e.currentTarget.classList.add("active");
 };
+
+
+
 
 export const toggleShopTopFilter = e => {
   const shopTopFilterWrapper = document.querySelector(
@@ -237,3 +311,7 @@ export const toggleShopTopFilter = e => {
   }
   e.currentTarget.classList.toggle("active");
 };
+
+
+
+

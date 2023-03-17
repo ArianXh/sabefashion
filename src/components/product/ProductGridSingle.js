@@ -8,6 +8,7 @@ import { getDiscountPrice } from "../../helpers/product";
 import ProductModal from "./ProductModal";
 import { addToCart } from "../../store/slices/cart-slice";
 import { addToWishlist } from "../../store/slices/wishlist-slice";
+import { urlFor } from "../../client";
 
 const ProductGridSingle = ({
   product,
@@ -29,11 +30,13 @@ const ProductGridSingle = ({
     <Fragment>
       <div className={clsx("product-wrap", spaceBottomClass)}>
         <div className="product-img">
-          <Link to={process.env.PUBLIC_URL + "/product/" + product.id}>
+          <Link to={process.env.PUBLIC_URL + "/product/" + product._id}>
             
             <img
               className="default-img"
-              src={process.env.PUBLIC_URL + product.image[0]}
+              src={urlFor(product.image[0].asset)}
+              //src={product.image[0].asset[0]}
+              //src={process.env.PUBLIC_URL + product.image[0]}
               //src={process.env.PUBLIC_URL + '/assets/img/product/fashion/sabe_1.jpg'}
               alt=""
             />

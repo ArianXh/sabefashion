@@ -3,9 +3,12 @@ import { useLocation } from "react-router-dom";
 import SEO from "../../components/seo";
 import LayoutOne from "../../layouts/LayoutOne";
 import Breadcrumb from "../../wrappers/breadcrumb/Breadcrumb";
-import GoogleMap from "../../components/google-map"
+import GoogleMap from "../../components/google-map";
+import WhatsAppButton from "../../components/whatsapp";
 
 const Contact = () => {
+  
+
   let { pathname } = useLocation();
 
   return (
@@ -82,6 +85,12 @@ const Contact = () => {
                           <i className="fa fa-facebook" />
                         </a>
                       </li>
+                    </ul>
+
+                    <br></br>
+                    <h3>WhatsApp Chat</h3>
+                    <ul>
+                      <WhatsAppButton />
                     </ul>
                   </div>
                 </div>

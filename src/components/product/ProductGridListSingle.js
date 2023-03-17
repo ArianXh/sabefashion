@@ -9,6 +9,8 @@ import ProductModal from "./ProductModal";
 import { addToCart } from "../../store/slices/cart-slice";
 import { addToWishlist } from "../../store/slices/wishlist-slice";
 import { addToCompare } from "../../store/slices/compare-slice";
+import { urlFor } from "..//..//client";
+
 
 const ProductGridListSingle = ({
   product,
@@ -33,7 +35,8 @@ const ProductGridListSingle = ({
             <Link to={process.env.PUBLIC_URL + "/product/" + product.id}>
               <img
                 className="default-img"
-                src={process.env.PUBLIC_URL + product.image[0]}
+                src={urlFor(product.image[0].asset)}
+                //src={process.env.PUBLIC_URL + product.image[0]}
                 //src={process.env.PUBLIC_URL + "/assets/img/product/fashion/" + product.image[0]}
                 //src={process.env.PUBLIC_URL + '/assets/img/product/fashion/sabe_1.jpg'}
                 alt=""
