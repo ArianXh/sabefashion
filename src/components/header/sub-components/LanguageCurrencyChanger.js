@@ -22,10 +22,10 @@ const LanguageCurrencyChanger = ({ currency }) => {
         <span>
           {i18n.resolvedLanguage === "en"
             ? "English"
-            : i18n.resolvedLanguage === "fn"
-            ? "French"
-            : i18n.resolvedLanguage === "de"
-            ? "Germany"
+            : i18n.resolvedLanguage === "al"
+            ? "Albanian"
+            : i18n.resolvedLanguage === "mk"
+            ? "Macedonian"
             : ""}{" "}
           <i className="fa fa-angle-down" />
         </span>
@@ -38,12 +38,12 @@ const LanguageCurrencyChanger = ({ currency }) => {
             </li>
             <li>
               <button value="fn" onClick={e => changeLanguageTrigger(e)}>
-                French
+                Albanian
               </button>
             </li>
             <li>
               <button value="de" onClick={e => changeLanguageTrigger(e)}>
-                Germany
+                Macedonian
               </button>
             </li>
           </ul>

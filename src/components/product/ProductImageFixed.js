@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-
+import { urlFor } from "..//..//client";
 
 const ProductImageFixed = ({ product }) => {
   return (
@@ -20,7 +20,8 @@ const ProductImageFixed = ({ product }) => {
       <div className="product-fixed-image">
         {product.image ? (
           <img
-            src={process.env.PUBLIC_URL + product.image[0]}
+            //src={process.env.PUBLIC_URL + product.image[0]}
+            src={urlFor(product.image)}
             alt=""
             className="img-fluid"
           />

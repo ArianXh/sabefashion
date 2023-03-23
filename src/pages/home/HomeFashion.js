@@ -8,11 +8,9 @@ import FeatureIcon from "../../wrappers/feature-icon/FeatureIcon";
 import TabProduct from "../../wrappers/product/TabProduct";
 import BlogFeatured from "../../wrappers/blog-featured/BlogFeatured";
 import BrandLogoSliderOne from "../../wrappers/brand-logo/BrandLogoSliderOne";
-import { useSelector } from "react-redux";
-import  {categories, products}  from "../../data/products";
+
 
 const HomeFashion = () => {
-  console.log(categories);
   return (
     <Fragment>
       <SEO
@@ -22,6 +20,7 @@ const HomeFashion = () => {
       <LayoutOne
         headerContainerClass="container-fluid"
         headerPaddingClass="header-padding-1"
+        headerTop="visible"
       >
         {/* hero slider */}
         <HeroSliderTen />

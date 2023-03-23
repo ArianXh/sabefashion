@@ -38,6 +38,7 @@
     "redux-persist": "^6.0.0",
     "redux-thunk": "^2.4.2",
     "sanity": "^3.5.0",
+    "source-map-explorer": "^2.5.3",
     "styled-components": "^5.2",
     "swiper": "^8.4.4",
     "util": "^0.12.5",
@@ -45,6 +46,7 @@
     "yet-another-react-lightbox": "^2.2.0"
   },
   "scripts": {
+    "analyze": "source-map-explorer 'build/static/js/*.js'",
     "start": "react-app-rewired start",
     "build": "react-app-rewired build",
     "test": "react-app-rewired test",

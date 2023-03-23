@@ -98,7 +98,7 @@ const Contact = () => {
               <div className="col-12 col-lg-8 col-md-7">
                 <div className="contact-form">
                   <div className="contact-title mb-30">
-                    <h2>Get In Touch</h2>
+                    <h2>Be up to date with our latest promotions</h2>
                   </div>
                   <form className="contact-form-style">
                     <div className="row">

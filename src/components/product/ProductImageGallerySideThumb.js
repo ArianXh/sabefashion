@@ -7,12 +7,16 @@ import Thumbnails from "yet-another-react-lightbox/plugins/thumbnails";
 import Zoom from "yet-another-react-lightbox/plugins/zoom";
 import Fullscreen from "yet-another-react-lightbox/plugins/fullscreen";
 import Swiper, { SwiperSlide } from "../../components/swiper";
+import { urlFor } from "..//..//client";
+
 
 const ProductImageGalleryLeftThumb = ({ product, thumbPosition }) => {
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
   const [index, setIndex] = useState(-1);
   const slides = product?.image.map((img, i) => ({
-      src: process.env.PUBLIC_URL + img,
+      //src: process.env.PUBLIC_URL + img,
+      //src: urlFor(product.image[0].asset),
+      src: urlFor(img),
       key: i,
   }));
 
@@ -68,6 +72,7 @@ const ProductImageGalleryLeftThumb = ({ product, thumbPosition }) => {
               ? "col-xl-10 order-1 order-xl-2"
               : "col-xl-10")}
         >
+          
           <div className="product-large-image-wrapper">
             {product.discount || product.new ? (
               <div className="product-img-badges">
@@ -90,7 +95,9 @@ const ProductImageGalleryLeftThumb = ({ product, thumbPosition }) => {
                     </button>
                     <div className="single-image">
                       <img
-                        src={process.env.PUBLIC_URL + single}
+                        //src={urlFor(product.image[0].asset)}
+                        //src={process.env.PUBLIC_URL + single}
+                        src={urlFor(single)}
                         className="img-fluid"
                         alt=""
                       />
@@ -120,7 +127,8 @@ const ProductImageGalleryLeftThumb = ({ product, thumbPosition }) => {
                   <SwiperSlide key={key}>
                     <div className="single-image">
                       <img
-                        src={process.env.PUBLIC_URL + single}
+                        //src={process.env.PUBLIC_URL + single}
+                        src={urlFor(single)}
                         className="img-fluid"
                         alt=""
                       />

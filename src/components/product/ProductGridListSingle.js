@@ -44,7 +44,7 @@ const ProductGridListSingle = ({
               {product.image.length > 1 ? (
                 <img
                   className="hover-img"
-                  src={process.env.PUBLIC_URL + product.image[1]}
+                  src={urlFor(product.image[0].asset)}
                   //src={process.env.PUBLIC_URL + '/assets/img/product/fashion/sabe_1.jpg'}
                   alt=""
                 />
@@ -161,14 +161,16 @@ const ProductGridListSingle = ({
                   <Link to={process.env.PUBLIC_URL + "/product/" + product.id}>
                     <img
                       className="default-img img-fluid"
-                      src={process.env.PUBLIC_URL + product.image[0]}
+                      src={urlFor(product.image[0].asset)}
+                      //src={process.env.PUBLIC_URL + product.image[0]}
                       //src={process.env.PUBLIC_URL + '/assets/img/product/fashion/sabe_1.jpg'}
                       alt=""
                     />
                     {product.image.length > 1 ? (
                       <img
                         className="hover-img img-fluid"
-                        src={process.env.PUBLIC_URL + product.image[1]}
+                        src={urlFor(product.image[0].asset)}
+                        //src={process.env.PUBLIC_URL + product.image[1]}
                         alt=""
                       />
                     ) : (

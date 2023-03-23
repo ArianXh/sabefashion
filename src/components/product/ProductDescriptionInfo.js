@@ -64,7 +64,7 @@ const ProductDescriptionInfo = ({
       <div className="pro-details-list">
         <p>{product.shortDescription}</p>
       </div>
-
+      
       {product.variation ? (
         <div className="pro-details-size-color">
           <div className="pro-details-color-wrap">

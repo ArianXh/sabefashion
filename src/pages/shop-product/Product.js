@@ -14,10 +14,6 @@ const Product = () => {
   const { products } = useSelector((state) => state.product);
   const product = products.find(product => product._id === id);
 
-
-  console.log("KATASTROFFFFFFFF" , products)
-  console.log("KATASTRO" , product)
-
   return (
     <Fragment>
       <SEO

@@ -2,7 +2,7 @@
 
 // get products
 export const getProducts = (products, category, type, limit) => {
-  console.log(category)
+  console.log(category + ' => KJO ESHTE TE HELPERS-AT, SHIFE SI VIN PREJ TE PROPS?!')
   const finalProducts = category
     ? products.filter(
         product => product.category.filter(single => single === category)[0]

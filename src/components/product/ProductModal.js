@@ -9,6 +9,7 @@ import { getProductCartQuantity } from "../../helpers/product";
 import { addToCart } from "../../store/slices/cart-slice";
 import { addToWishlist } from "../../store/slices/wishlist-slice";
 import { addToCompare } from "../../store/slices/compare-slice";
+import { urlFor } from "..//..//client";
 
 function ProductModal({ product, currency, discountedPrice, finalProductPrice, finalDiscountedPrice, show, onHide, wishlistItem, compareItem }) {
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
@@ -71,11 +72,13 @@ function ProductModal({ product, currency, discountedPrice, finalProductPrice, f
             <Swiper options={gallerySwiperParams}>
               {product.image &&
                 product.image.map((img, i) => {
+                  console.log(product)
                   return (
                     <SwiperSlide key={i}>
                       <div className="single-image">
                         <img
-                          src={process.env.PUBLIC_URL + img}
+                          src={urlFor(img)}
+                          //src={process.env.PUBLIC_URL + img}
                           className="img-fluid"
                           alt="Product"
                         />
@@ -85,15 +88,18 @@ function ProductModal({ product, currency, discountedPrice, finalProductPrice, f
                 })}
             </Swiper>
           </div>
+          
           <div className="product-small-image-wrapper mt-15">
             <Swiper options={thumbnailSwiperParams}>
               {product.image &&
                 product.image.map((img, i) => {
                   return (
                     <SwiperSlide key={i}>
-                      <div className="single-image">
+                      <div className="single-image"> 
                         <img
-                          src={process.env.PUBLIC_URL + img}
+                          //src={urlFor(product.image[0].asset)}
+                          //src={process.env.PUBLIC_URL + img}
+                          src={urlFor(img)}
                           className="img-fluid"
                           alt=""
                         />
